@@ -98,3 +98,6 @@ def drift_detection_workflow():
   ## save the pandas dataframe in a csv format
     drift_df.to_csv("data/drift_scores.csv")
 
+if __name__=="__main__":
+    drift_detection_workflow()
+
