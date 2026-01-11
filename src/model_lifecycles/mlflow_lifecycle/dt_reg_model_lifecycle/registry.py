@@ -8,8 +8,7 @@ from lib.mlflow_configs import load_model_info
 ## set the mlflow host and running/active experiment within the mlflow host:
 set_mlflow_host()
 
-set_mlflow_running_experiment()
-
+set_mlflow_running_experiment(experiment_name="medical_cost_exp")
 ## get the X_train and y_train:
 X_train,y_train=X_train_y_train()
 
