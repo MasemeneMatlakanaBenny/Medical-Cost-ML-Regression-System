@@ -35,6 +35,11 @@ model_schema=ModelSchema(input_schema=input_schema,output_schema=output_schema)
 
 
 ## model registry using the project created in hospworks:
-model_registry=project.get_model_registry
+model_registry=project.get_model_registry()
 
-model=model_registry.sklearn.create_model()
+
+model=model_registry.sklearn.create_model(
+    name="dt_model",
+    model_schema=model_schema
+)
+)
