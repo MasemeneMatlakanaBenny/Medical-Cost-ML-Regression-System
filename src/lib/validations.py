@@ -1,7 +1,7 @@
 import pandas as pd
 import great_expectations as gx
 from great_expectations.expectations.expectation import ExpectationConfiguration
-from great_expectations.core import Batch
+from great_expectations.core.batch import Batch
 from typing import List,Union
 
 def create_batch(df:pd.DataFrame)->Batch:
