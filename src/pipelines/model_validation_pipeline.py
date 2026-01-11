@@ -83,10 +83,10 @@ def model_validation_workflow():
     ## get both decision tree model metrics and linear model metrics:
 
     ###this is now a dataframe storing decision tree model metrics
-    dt_metrics_df=create_metrics_df(metrics_path="src/metrics/dt_reg_model_metrics.pkl") 
+    dt_metrics_df=create_metrics_df(metrics_path="src/metrics/dt_metrics.pkl") 
 
     ### this is now a dataframe storing linear regression model metrics
-    linear_metrics_df=create_metrics_df(metrics_path="src/metrics/linear_reg_model_metrics.pkl") ## this is now a dataframe
+    linear_metrics_df=create_metrics_df(metrics_path="src/metrics/linear_reg_metrics.pkl") ## this is now a dataframe
 
     ## get the validation results where we store the expectation and the validated results for each model:
     dt_validation_results_df=model_validation_results(metrics_df=dt_metrics_df)
