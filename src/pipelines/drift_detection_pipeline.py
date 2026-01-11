@@ -62,7 +62,7 @@ def drift_scores_df(drift_results,features:List[str])->pd.DataFrame:
    
     drift_scores=[]
     for feature in features:
-        drift_score=drift_results[feature]['Drift score']
+        drift_score=drift_results.value[feature]['Drift score']
         
         drift_scores.append(drift_score)
         
