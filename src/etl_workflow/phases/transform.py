@@ -16,4 +16,4 @@ df["insurance_type"]=df["insurance_type"].fillna("No Insurance")
 print(df.info()) ## to check if there are any nulls remaining or not
 
 ## save the df now:
-df.to_csv("transformed_df.csv",index=False)
+df.to_csv("data/transformed_df.csv",index=False)
