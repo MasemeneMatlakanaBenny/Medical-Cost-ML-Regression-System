@@ -5,7 +5,7 @@ from lib.mlflow_configs import set_mlflow_host,set_mlflow_running_experiment,mlf
 
 ## set the mlflow host and experiment within the mlflow server:
 set_mlflow_host()
-set_mlflow_running_experiment()
+set_mlflow_running_experiment(experiment_name="medical_cost_exp")
 
 ## create the client -> will be used to move the model from the registry to staging phase
 client=mlflow_client()
