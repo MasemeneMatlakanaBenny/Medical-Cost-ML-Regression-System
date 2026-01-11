@@ -1,1 +1,16 @@
-
+label,results
+insurance_exp,success
+diabetes_min,success
+diabetes_max,success
+diabetes_sum,success
+age_min,success
+age_max,success
+hyper_min,success
+hyper_max,success
+hyper_sum,success
+heart_min,success
+heart_max,success
+heart_sum,success
+asthma_min,success
+asthma_max,success
+asthma_sum,success
