@@ -7,3 +7,4 @@ prefect
 kubeflow
 hopsworks
 great_expectations
+deepchecks
