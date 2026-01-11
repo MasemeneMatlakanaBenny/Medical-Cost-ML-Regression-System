@@ -81,9 +81,9 @@ def drift_detection_workflow():
     X_train,y_train=X_train_y_train()
   
     ## get the train and test sets
-    train_df=load_df_file("data/train_df.csv")
+    train_df=load_df_file("data/train_data.csv")
     
-    test_df=load_df_file("data/test_df.csv")
+    test_df=load_df_file("data/test_data.csv")
 
   ## create deepchecks dataset for both train and test sets
     train_checks=tabular_checks_data(train_df,cat_features=None)
