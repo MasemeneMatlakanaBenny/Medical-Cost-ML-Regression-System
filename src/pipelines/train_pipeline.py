@@ -45,3 +45,6 @@ def train_workflow():
 
     save_model(linear_model,model_path="src/models/linear_reg_model.pkl")
     save_model(dt_model,model_path="src/models/dt_reg_model.pkl")
+
+if __name__=="__main__":
+  train_workflow()
