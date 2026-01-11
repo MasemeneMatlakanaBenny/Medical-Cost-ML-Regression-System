@@ -102,4 +102,6 @@ def model_validation_workflow():
     ## get the meta results:
     print(f"Meta Validation For Decision Tree Model:{meta_dt_validation}")
     print(f"Meta Validation For Regression Model:{meta_linear_validation}")
-    
+
+if __name__=="__main__":
+    model_validation_workflow()
