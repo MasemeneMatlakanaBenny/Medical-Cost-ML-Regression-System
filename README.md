@@ -33,6 +33,24 @@ replacing med_env with the name of the virtual environment created
 
 ----
 
+## Library:
+Sofware Engineering is still relevant and important for ML and AI workflow especially when developing ML systems or chatbots or RAG pipelines. As such ,we develop our own library for the workflow which has five modules for reusability ,modularity and encapsulation.
+This saves time and make it better to write production-grade ready code for ML/AI workflows.
+
+For details of the modules,the configs module is for computing metrics and getting X_train,X_test,y_train and y_test in the entire workflow.Whenever needed ,we import it and use it.
+Then feature_selection library will be used when checking for a shift in the data distribution and select relevant features with little drift in them.
+mlflow_configs module will be used for the model deployment phase for reusability of mlflow configurations such as setting the mlflow host and experiment within the server. 
+However mflow_configs is necessary too for managing the model lifecycles since we might retrain more models in the future based on the on-going development and monitoring.
+model_validatins is the module for validating and testing if the model passes the quality checks and benchmarks we've set.
+validations will be used for data quality checks to ensure correctness and accuracy of the data before machine learning consumption.
+webhooks will be used for notifications.
+
+Here is the library for the workflow found in the src/lib.
+
+![LIB](images/LIBRARY.png)
+
+
+
 ## ETL Workflow:
 
 In the ETL workflow ,we are concerned with getting our hands on the dataset first.  The dataset is extracted from the database with the use of SQLAlchemy ,transformed with the use of pandas and loaded into the hopsworks lakehouse for future analytics and consumption. As explained in the each ETL phase,data quality checks are performed to ensure clean ,reliable ,consistent and accurate data before further 
@@ -232,7 +250,26 @@ The three files -> registry,staging and production which is the lifecycle of mod
 
 ---
 
+## Data Distributions:
+This is where we perform drift detection with the use of deepchecks.
+We also use standard deviations for feature selection rather than built in scikit learn classes.
 
+Focus shift onto data distributions in the src folder.
+
+We only have three files- drift_detection,std_scores_validations and feature_selection.
+
+In the drift detection- we use deepchecks. In the feature_selection -we check for any shift in the feature distributions and later validate those shifts in std_scores_validations.
+
+![DISTR](images/DISTRIBUTIONS.png)
+
+
+## Pipelines:
+This is where we orchestrate and reuse some of the code by breaking down them into simpler tasks.
+Pipelines are just refactors and orchestration of all the above except for ETL workflow and Model Deployment.
+
+
+
+![DISTR](images/PIPELINES.png)
 
 
 
