@@ -39,7 +39,7 @@ replacing med_env with the name of the virtual environment created
 work with it.
 
 ETL Workflow:
-![Alt text for screen readers]("C:\Users\btlak\Pictures\codes\STRUCTURE.png")
+![Alt text for screen readers]("C:\\Users\\btlak\\Pictures\\codes\\STRUCTURE.png)
 
 ### Step 1: Extraction
 Extract the raw data from the database with the use of SQLAlchemy and Pandas. 
