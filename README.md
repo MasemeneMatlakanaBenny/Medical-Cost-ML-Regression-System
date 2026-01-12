@@ -39,7 +39,7 @@ replacing med_env with the name of the virtual environment created
 work with it.
 
 ETL Workflow:
-![Model Diagram](images/structure.png).
+![Model Diagram](images/STRUCTURE.png).
 
 We focus on the etl_workflow which is in the src folder
 
