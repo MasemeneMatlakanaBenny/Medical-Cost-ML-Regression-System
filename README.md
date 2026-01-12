@@ -158,5 +158,9 @@ Here is the structure of the model development phase:
 
 ![MODEL_DEV](images/MODEL_DEV.png)
 
-D
+## MODEL EVALUATION
 
+Model evaluation is a phase in the workflow where we evaluate the models and get the model metrics.
+Three key metrics used in evaluating models for the system has to be R-squared,RMSE and MSE.
+Once computed these metrics are then saved to the src/metrics folder
+![MODEL EVAL](images/MODEL_EVALUATION.png)
