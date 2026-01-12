@@ -158,9 +158,42 @@ Here is the structure of the model development phase:
 
 ![MODEL_DEV](images/MODEL_DEV.png)
 
+
 ## MODEL EVALUATION
 
 Model evaluation is a phase in the workflow where we evaluate the models and get the model metrics.
 Three key metrics used in evaluating models for the system has to be R-squared,RMSE and MSE.
 Once computed these metrics are then saved to the src/metrics folder
 ![MODEL EVAL](images/MODEL_EVALUATION.png)
+
+## MODEL VALIDATION
+
+Model validation process is more or less the same as the data quality checks.
+We create expectations that our models must pass in order to productionize them.
+There are two folders in the model validation folder. 
+Validations is for the initial model quality checks and meta validations is for validating the validations.
+We validate the metrics which we computed in the model evaluation phase which can be found in the src/metrics folder
+
+Here is the structure:
+![MODEL_DEV](images/MODEL_VALIDATION.png)
+
+
+## MODEL DEPLOYMENT:
+
+For model deployment,we use mlflow and hopsworks. 
+However the focus will be more on mlflow since it might be difficult to get it started .
+First open the Anaconda prompt on the local machine and here is the following command to run:
+
+mlflow server --backend-store-uri ./mlruns --default-artifact-root ./mlruns --host 127.0.0.1 --port 5000
+
+,this will get mlflow running.
+
+Here is an image:
+
+![MLFLOW](images/RUN_MLFLOW.png)
+
+
+
+
+
+
