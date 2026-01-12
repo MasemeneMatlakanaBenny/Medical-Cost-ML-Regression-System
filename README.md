@@ -51,7 +51,13 @@ We focus on the etl_workflow which is in the src folder
 
 ----
 
-### Step 1: Extraction
+### ETL Phases:
+
+ETL Phases are executed first in the system. That is we need the data for machine learning consumption. Without data,no system can be built.
+
+
+
+###$ Step 1: Extraction
 Extract the raw data from the database with the use of SQLAlchemy and Pandas. 
 Use dotenv and os libraries in Python to get the credentials and coonnect to the database for querying.
 After extracting the data,save it in the data folder in a csv format.
@@ -64,7 +70,7 @@ Execution: python src/etl_workflow/phases/extract.py
 
 ---
 
-### Step 2:Transformation:
+#### Step 2:Transformation:
 Here is a phase for checking missing values,performing necessary imputation where possible.
 The transformation methods and operations are all performed over the extracted data
 In this case,we add datetime and unique user ids as such these are the only transformations performed here.
@@ -77,7 +83,7 @@ Execution: python src/etl_workflow/phases/transform.py
 
 ---
 
-### Step 3: Loading:
+#### Step 3: Loading:
 After transforming the data and ensuring that it is clean,we load it into hopsworks which is the AI Lakehouse.
 
 The loading file location:
