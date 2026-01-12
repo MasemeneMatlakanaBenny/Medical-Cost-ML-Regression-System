@@ -38,4 +38,44 @@ replacing med_env with the name of the virtual environment created
 -- In the ETL workflow ,we are concerned with getting our hands on the dataset first.  The dataset is extracted from the database with the use of SQLAlchemy ,transformed with the use of pandas and loaded into the hopsworks lakehouse for future analytics and consumption. As explained in the each ETL phase,data quality checks are performed to ensure clean ,reliable ,consistent and accurate data before further 
 work with it.
 
+ETL Workflow:
+![Alt text for screen readers]("C:\Users\btlak\Pictures\codes\STRUCTURE.png")
+
+### Step 1: Extraction
+Extract the raw data from the database with the use of SQLAlchemy and Pandas. 
+Use dotenv and os libraries in Python to get the credentials and coonnect to the database for querying.
+After extracting the data,save it in the data folder in a csv format.
+
+The extraction file:
+
+src/extract.py
+
+Execution: python src/extract.py
+
+---
+
+### Step 2:Transformation:
+Here is a phase for checking missing values,performing necessary imputation where possible.
+The transformation methods and operations are all performed over the extracted data
+In this case,we add datetime and unique user ids as such these are the only transformations performed here.
+
+The transformation file:
+
+src/transform.py
+
+Execution: python src/transform.py
+
+---
+
+### Step 3: Loading:
+After transforming the data and ensuring that it is clean,we load it into hopsworks which is the AI Lakehouse.
+
+The loading file location:
+
+src/loading.py
+
+Execution: python src/loading.py
+
+---
+
 
