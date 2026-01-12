@@ -118,10 +118,17 @@ Execution: python src/etl_workflow/validations/data_vals.py
 
 Then we save the validations results to the data_quality_checks in a csv format for meta validation workflow.
 
+![SAVING VALIDATION](images/DATA_VALIDATION.png)
+
+
 #### Step 2: Meta Data Validations
 
 Meta data validations is just validations about validations.
 
 Execution: python src/etl_workflow/validations/meta_data_vals.py
+
+
+
+
 
 
