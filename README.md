@@ -180,6 +180,7 @@ Here is the structure:
 
 ## MODEL DEPLOYMENT:
 
+### Step 1: Run Mlflow
 For model deployment,we use mlflow and hopsworks. 
 However the focus will be more on mlflow since it might be difficult to get it started .
 First open the Anaconda prompt on the local machine and here is the following command to run:
@@ -191,6 +192,23 @@ mlflow server --backend-store-uri ./mlruns --default-artifact-root ./mlruns --ho
 Here is an image:
 
 ![MLFLOW](images/RUN_MLFLOW.png)
+
+
+### Step 2: Create Experiment:
+Here is how to now create an mlflow experiment.
+Since mlflow is now running,go to local web browser and run:
+
+http://127.0.0.1:5000/
+
+Here is an image showing mlflow running:
+![MLFLOW](images/CREATE_MLFLOW_EXP.png)
+
+
+Now on the navigations ,we have Experiments,Models and Prompts.
+Our focus is on creating the experiment first then store and deploy our models within that experiment. It should be noted that failure to do so will result in automated and uncontrolled experiments which can be hard to re-run and keep track of in our code hence leading to models being stored in different experiments.
+
+
+
 
 
 
