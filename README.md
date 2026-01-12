@@ -127,8 +127,19 @@ Meta data validations is just validations about validations.
 
 Execution: python src/etl_workflow/validations/meta_data_vals.py
 
+----
 
+### DATA PIPELINES
 
+Data Pipelines is refactoring the same ETL phases and Data Validations but with an orchestration framework which is prefect in this case.
+
+Structure of the Data Pipelines. Still in the etl_workflow by the way.
+
+Only two folders exist in the pipelines folder which are phase_pipelines and validations pipeline. 
+
+They still do the same thing but now break down long workflow or code into reusable components called tasks and execute within a flow.
+
+![Model Diagram](images/DATA_PIPELINES.png)
 
 
 
