@@ -136,10 +136,27 @@ Data Pipelines is refactoring the same ETL phases and Data Validations but with 
 Structure of the Data Pipelines. Still in the etl_workflow by the way.
 
 Only two folders exist in the pipelines folder which are phase_pipelines and validations pipeline. 
+phase_pipelines is where the ETL phases are orchestrated and validations is for orchestrating the data validations/quality checks
 
 They still do the same thing but now break down long workflow or code into reusable components called tasks and execute within a flow.
 
-![Model Diagram](images/DATA_PIPELINES.png)
+![DATA_PIPELINES](images/DATA_PIPELINES.png)
 
+---- 
 
+## MODEL DEV
+
+Model development is focusing on training machine learning models on train set and preparing them for future prediction task. 
+Here the focus is mainly on four things - data_split ,tree model,linear model and inference.
+
+First we split the data into train and test set where the train is used for model development and the test is reserved for model evaluation ,validation and inferencing.
+
+Both the train and test sets are then saved into the data folder.
+Inference is for making predictions on unseen data ,that is test dataset.
+
+Here is the structure of the model development phase:
+
+![MODEL_DEV](images/MODEL_DEV.png)
+
+D
 
