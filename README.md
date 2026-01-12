@@ -96,4 +96,12 @@ Execution: python src/etl_workflow/phases/loading.py
 
 ---
 
+### Data Validation/Quality checks
+
+Now we move onto data quality checks to ensure the correctness and accuracy of the data we are working with.
+
+Here is the structure of data validations in the workflow.
+
+Only two files exist here- data_vals and meta_data_vals. 
+Data vals is where we perform the initial data validations and meta data validations is where we validate the data validations
 
