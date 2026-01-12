@@ -54,10 +54,13 @@ We focus on the etl_workflow which is in the src folder
 ### ETL Phases:
 
 ETL Phases are executed first in the system. That is we need the data for machine learning consumption. Without data,no system can be built.
+In the ETL PHASES workflow and structure
 
+![ETL PHASES](images/ETL_PHASES.png)
 
+Only three phases -extract,transform and loading.
 
-###$ Step 1: Extraction
+### Step 1: Extraction
 Extract the raw data from the database with the use of SQLAlchemy and Pandas. 
 Use dotenv and os libraries in Python to get the credentials and coonnect to the database for querying.
 After extracting the data,save it in the data folder in a csv format.
