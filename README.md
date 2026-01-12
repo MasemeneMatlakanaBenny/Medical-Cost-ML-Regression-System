@@ -35,7 +35,7 @@ replacing med_env with the name of the virtual environment created
 
 ## ETL Workflow:
 
--- In the ETL workflow ,we are concerned with getting our hands on the dataset first.  The dataset is extracted from the database with the use of SQLAlchemy ,transformed with the use of pandas and loaded into the hopsworks lakehouse for future analytics and consumption. As explained in the each ETL phase,data quality checks are performed to ensure clean ,reliable ,consistent and accurate data before further 
+In the ETL workflow ,we are concerned with getting our hands on the dataset first.  The dataset is extracted from the database with the use of SQLAlchemy ,transformed with the use of pandas and loaded into the hopsworks lakehouse for future analytics and consumption. As explained in the each ETL phase,data quality checks are performed to ensure clean ,reliable ,consistent and accurate data before further 
 work with it.
 
 Here is the picture demonstrating how the ETL workflow is structured:
@@ -44,9 +44,7 @@ Here is the picture demonstrating how the ETL workflow is structured:
 
 Only three folders are found-phases,pipeline and validations.
 
-phases is where ETL is performed.
-pipeline for orchestrated pipelines that can be rescheduled.
-validations for data quality checks or data validations.
+phases is where ETL is performed,pipelines for orchestrated pipelines that can be rescheduled and validations for data quality checks or data validations.
 
 
 We focus on the etl_workflow which is in the src folder
