@@ -102,6 +102,26 @@ Now we move onto data quality checks to ensure the correctness and accuracy of t
 
 Here is the structure of data validations in the workflow.
 
+![Validation strcuture](images/VALIDATIONS.png)
+
+
 Only two files exist here- data_vals and meta_data_vals. 
 Data vals is where we perform the initial data validations and meta data validations is where we validate the data validations
+
+#### Step 1: Data Validations
+
+We perform the data validations with the use of great_expectations to ensure that the data passes all data quality checks and our expectations.
+
+The initial data validations are executed by using the following command:
+
+Execution: python src/etl_workflow/validations/data_vals.py
+
+Then we save the validations results to the data_quality_checks in a csv format for meta validation workflow.
+
+#### Step 2: Meta Data Validations
+
+Meta data validations is just validations about validations.
+
+Execution: python src/etl_workflow/validations/meta_data_vals.py
+
 
