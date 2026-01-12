@@ -104,6 +104,7 @@ Here is the structure of data validations in the workflow.
 
 ![Validation strcuture](images/VALIDATIONS.png)
 
+---
 
 Only two files exist here- data_vals and meta_data_vals. 
 Data vals is where we perform the initial data validations and meta data validations is where we validate the data validations
@@ -120,6 +121,7 @@ Then we save the validations results to the data_quality_checks in a csv format 
 
 ![SAVING VALIDATION](images/DATA_VALIDATION.png)
 
+----
 
 #### Step 2: Meta Data Validations
 
@@ -158,6 +160,7 @@ Here is the structure of the model development phase:
 
 ![MODEL_DEV](images/MODEL_DEV.png)
 
+----
 
 ## MODEL EVALUATION
 
@@ -166,6 +169,7 @@ Three key metrics used in evaluating models for the system has to be R-squared,R
 Once computed these metrics are then saved to the src/metrics folder
 ![MODEL EVAL](images/MODEL_EVALUATION.png)
 
+---
 ## MODEL VALIDATION
 
 Model validation process is more or less the same as the data quality checks.
@@ -177,6 +181,7 @@ We validate the metrics which we computed in the model evaluation phase which ca
 Here is the structure:
 ![MODEL_DEV](images/MODEL_VALIDATION.png)
 
+----
 
 ## MODEL DEPLOYMENT:
 
@@ -193,6 +198,7 @@ Here is an image:
 
 ![MLFLOW](images/RUN_MLFLOW.png)
 
+----
 
 ### Step 2: Create Experiment:
 Here is how to now create an mlflow experiment.
@@ -208,6 +214,23 @@ Now on the navigations ,we have Experiments,Models and Prompts.
 Our focus is on creating the experiment first then store and deploy our models within that experiment. It should be noted that failure to do so will result in automated and uncontrolled experiments which can be hard to re-run and keep track of in our code hence leading to models being stored in different experiments.
 
 
+----
+
+### Step 3:Model Lifecycles:
+
+In the model lifecycles,we manage and version the models inside mlflow.
+This is the advantage that mlflow has over other model storage tools such as hopsworks and weights & biases.
+
+We register the model -> stage it -> productionize it.
+If the model failed quality checks then we might as well as archive it to reserve storage and optimize resources for other incoming models that we might retrain in the future.
+
+Now we are in lifecycles in the src folder focusing on mlflow.
+
+We have two folders namely dt_model_lifecycle and linear_model_lifecycle with each having three files. 
+The three files -> registry,staging and production which is the lifecycle of models.
+![MLFLOW](images/MLFLOW_LIFECYCLE.png)
+
+---
 
 
 
