@@ -39,8 +39,11 @@ replacing med_env with the name of the virtual environment created
 work with it.
 
 ETL Workflow:
-<img src=""C:\Users\btlak\Pictures\codes\STRUCTURE.png", alt="Project Screenshot" width="500">
+![Model Diagram](images/structure.png).
 
+We focus on the etl_workflow which is in the src folder
+
+----
 
 ### Step 1: Extraction
 Extract the raw data from the database with the use of SQLAlchemy and Pandas. 
